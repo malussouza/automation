@@ -14,6 +14,7 @@ Para executar este projeto, é necessário ter os seguintes requisitos:
 
 - Java 11+ JDK 
 - Maven configurado no PATH da aplicação
+- Cucumber
 
 
 ## limpar o cache local e atualizar as dependências
