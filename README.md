@@ -34,7 +34,7 @@ do teste ou podera executar pela linha de comando atraves do comando:<br>
 Executar todos os testes<br>
 
 ```bash
-mvn test 
+mvn test -Dtest=runner
 ```
 
 ## Estrutura de Diretorios
