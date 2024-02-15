@@ -34,23 +34,14 @@ public class ValidarPesquisarInformacao {
         elemento.clicar(By.cssSelector(".icon-search:nth-child(2) > svg"));
     }
 
-    @Entao("na tela de resultado da pequisa devera retornar a mensagem: {string}")
-    public void naTelaDeResultadoDaPequisaDeveraRetornarAMensagem(String mensagemRetornada) {
-        String mensagem1 = elemento.ExtrairTexto(By.xpath("//p[contains(text(),'Lamentamos, mas nada foi encontrado para sua pesqu')]"));
-        String mensagem2 = elemento.ExtrairTexto(By.xpath("//a[normalize-space()='Comece sua carreira em tecnologia com o Agi!']"));
+    @Entao("na tela de resultado da pequisa devera retornar a mensagem válida: {string}")
+    public void naTelaDeResultadoDaPequisaDeveraRetornarAMensagemAcerto(String mensagemRetornada) {
+        Assert.assertEquals(mensagemRetornada,  elemento.ExtrairTexto(By.xpath("//a[normalize-space()='Comece sua carreira em tecnologia com o Agi!']")));
+    }
 
-        // Verifica se a mensagem retornada é para o primeiro cenário
-        if (mensagem1.equals(mensagemRetornada)) {
-            Assert.assertEquals(mensagemRetornada, mensagem1);
-        }
-        // Verifica se a mensagem retornada é para o segundo cenário
-        else if (mensagem2.equals(mensagemRetornada)) {
-            Assert.assertEquals(mensagemRetornada, mensagem2);
-        }
-        // Se nenhuma das mensagens corresponder, falha o teste
-        else {
-            Assert.fail("A mensagem retornada não corresponde a nenhum dos cenários esperados.");
-        }
+    @Entao("na tela de resultado da pequisa devera retornar a mensagem inválida: {string}")
+    public void naTelaDeResultadoDaPequisaDeveraRetornarAMensagemErro(String mensagemRetornada) {
+        Assert.assertEquals(mensagemRetornada,  elemento.ExtrairTexto(By.xpath("//p[contains(text(),'Lamentamos, mas nada foi encontrado para sua pesqu')]")));
     }
 
     @Entao("gravar evidencia")

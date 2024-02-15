@@ -11,13 +11,27 @@ Funcionalidade: Validar lupa de busca
     Quando clicar na lupa
     E Na barra de pesquisa informar: <InformacaoBuscada>
     E clicar no botão pesquisar
-    Então na tela de resultado da pequisa devera retornar a mensagem: <ResultadoEsperado>
+    Então na tela de resultado da pequisa devera retornar a mensagem válida: <ResultadoEsperado>
     E gravar evidencia
     E fechar navegador
 
     Exemplos: Informação a serem buscadas
       | InformacaoBuscada                              | ResultadoEsperado                               |
       | "Comece sua carreira em tecnologia com o Agi!" | "Comece sua carreira em tecnologia com o Agi!"  |
+
+
+  @ValidarPesquisarInformacao
+  Esquema do Cenario: Realizar a pesquisa de informação no blog
+    Dado Que estou na pagina inical do blog do agi
+    Quando clicar na lupa
+    E Na barra de pesquisa informar: <InformacaoBuscada>
+    E clicar no botão pesquisar
+    Então na tela de resultado da pequisa devera retornar a mensagem inválida: <ResultadoEsperado>
+    E gravar evidencia
+    E fechar navegador
+
+    Exemplos: Informação a serem buscadas
+      | InformacaoBuscada                              | ResultadoEsperado                               |
       | "Adsasasdasd"                                  | "Lamentamos, mas nada foi encontrado para sua pesquisa, tente novamente com outras palavras." |
 
   @ValidarFecharBarraPesquisa
@@ -25,7 +39,7 @@ Funcionalidade: Validar lupa de busca
     Dado Que estou na pagina inicial do blog agi
     Quando clicar  na lupa a barra de pesquisa sera aberta
     E clicar novamente na lupa
-    Entao a barra de pesquisa devera ser fechada
+    Entao clicar novamente na lupa
     E gravar a evidencia
     E fechar a navegador
 
