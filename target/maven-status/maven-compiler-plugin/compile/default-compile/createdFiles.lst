@@ -1,0 +1,4 @@
+pages/PaginaInicial.class
+utils/Elemento.class
+utils/Screenshot.class
+utils/WebDriverFabrica.class
