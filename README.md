@@ -37,36 +37,28 @@ Executar todos os testes<br>
 mvn test 
 ```
 
-
-
 ## Estrutura de Diretorios
 
-|-- automation-main
-|   |-- .github
-|   |-- .idea
-|   |-- drivers
-|   |   |-- chromedriver
-|   |-- screenshots
-|   |-- src
-|   |   |-- main
-|   |   |   |-- java
-|   |   |   |   |-- pages
-|   |   |   |   |   |-- PaginaInicial
-|   |   |   |   |-- utils
-|   |   |   |   |   |-- Elemento
-|   |   |   |   |   |-- Screenshot
-|   |   |   |   |   |-- WebDriverFabrica
-|   |   |-- test
-|   |   |   |-- java
-|   |   |   |   |-- runners
-|   |   |   |   |   |-- runner
-|   |   |   |   |-- steps
-|   |   |   |   |   |-- ValidarFecharBarraPesquisa
-|   |   |   |   |   |-- ValidarPesquisarInformacao
-|   |   |-- resources
-|   |-- target
-|   |-- pom.xml
-|   |-- README.md
+# Estrutura de Diretórios
+
+- automation-main
+  - .github
+  - .idea
+  - drivers
+    - chromedriver
+  - screenshots
+  - src
+    - main
+      - java
+        - pages
+          - PaginaInicial
+        - utils
+          - Elemento
+          - Screenshot
+          - WebDriverFabrica
+    - test
+      - java
+
 
 ## O projeto está dividido em pacotes, conforme a seguir:
 
