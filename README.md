@@ -40,25 +40,34 @@ mvn test
 ## Estrutura de Diretorios
 
 # Estrutura de Diretórios
-
-- automation-main
-  - .github
-  - .idea
-  - drivers
-    - chromedriver
-  - screenshots
-  - src
-    - main
-      - java
-        - pages
-          - PaginaInicial
-        - utils
-          - Elemento
-          - Screenshot
-          - WebDriverFabrica
-    - test
-      - java
-
+```text
+|-- automation-main
+|   |-- .github
+|   |-- .idea
+|   |-- drivers
+|   |   |-- chromedriver
+|   |-- screenshots
+|   |-- src
+|   |   |-- main
+|   |   |   |-- java
+|   |   |   |   |-- pages
+|   |   |   |   |   |-- PaginaInicial
+|   |   |   |   |-- utils
+|   |   |   |   |   |-- Elemento
+|   |   |   |   |   |-- Screenshot
+|   |   |   |   |   |-- WebDriverFabrica
+|   |   |-- test
+|   |   |   |-- java
+|   |   |   |   |-- runners
+|   |   |   |   |   |-- runner
+|   |   |   |   |-- steps
+|   |   |   |   |   |-- ValidarFecharBarraPesquisa
+|   |   |   |   |   |-- ValidarPesquisarInformacao
+|   |   |-- resources
+|   |-- target
+|   |-- pom.xml
+|   |-- README.md
+```
 
 ## O projeto está dividido em pacotes, conforme a seguir:
 
